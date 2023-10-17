@@ -1,0 +1,16 @@
+{
+  "name": "studio-template-empty",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.1.4",
+    "studio-private-beta": "npm:leaf-simplest-round-ride@^0.0.4"
+  }
+}

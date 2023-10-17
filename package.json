@@ -1,3 +1,19 @@
 {
-	"private": true
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "run-s --continue-on-error lint:*",
+    "lint:astro-sync": "pnpm -r exec astro sync",
+    "lint:typegen": "pnpm -r exec studio typegen",
+    "lint:eslint": "eslint . --fix --cache --cache-file=node_modules/.cache/.eslintcache --report-unused-disable-directives",
+    "lint:prettier": "prettier . --write --cache --list-different",
+    "lint:tsc": "pnpm -r exec tsc -b",
+    "lint:astro-check": "pnpm -r exec astro check"
+  },
+  "devDependencies": {
+    "@astrojs/site-kit": "github:withastro/site-kit",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.2.2"
+  },
+  "prettier": "@astrojs/site-kit/prettier"
 }

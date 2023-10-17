@@ -1,4 +1,4 @@
-import { defineConfig } from "studio-private-beta"
+import { defineConfig } from 'studio-private-beta';
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,4 +7,4 @@ export default defineConfig({
 			// Define your studio collections here!
 		},
 	},
-})
+});

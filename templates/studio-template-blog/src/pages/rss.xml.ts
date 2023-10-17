@@ -1,10 +1,10 @@
-import rss from "@astrojs/rss"
-import type { APIContext } from "astro"
-import { Blog, db } from "astro:db"
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts"
+import rss from '@astrojs/rss';
+import type { APIContext } from 'astro';
+import { Blog, db } from 'astro:db';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export async function GET(context: APIContext) {
-	const posts = await db.select().from(Blog)
+	const posts = await db.select().from(Blog);
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
@@ -16,5 +16,5 @@ export async function GET(context: APIContext) {
 			pubDate: post.publishedAt,
 			content: post.content,
 		})),
-	})
+	});
 }

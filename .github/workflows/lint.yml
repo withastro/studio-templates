@@ -6,4 +6,4 @@ on:
 
 jobs:
   lint:
-    uses: withastro/site-kit/.github/workflows/lint.yml@reusable-lint-workflow
+    uses: withastro/site-kit/.github/workflows/lint.yml@main

@@ -14,7 +14,9 @@ export default defineConfig({
 					slug: field.text({ optional: true }),
 					publishedAt: field.date({ default: 'now' }),
 					updatedAt: field.date({ optional: true }),
-					heroImage: field.text({ optional: true }),
+					heroImage: field.text({
+						default: '/blog-placeholder-1.jpg',
+					}),
 					content: field.text({ multiline: true }),
 				},
 			},

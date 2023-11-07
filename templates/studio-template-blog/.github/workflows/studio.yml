@@ -1,6 +1,5 @@
 name: Astro Studio Sync
 env:
-  ASTRO_STUDIO_SESSION_ID: ${{ secrets.ASTRO_STUDIO_SESSION_ID }}
   ASTRO_STUDIO_PROJECT_ID: ${{ secrets.ASTRO_STUDIO_PROJECT_ID }}
   ASTRO_STUDIO_APP_TOKEN: ${{secrets.ASTRO_STUDIO_APP_TOKEN }}
 on:
@@ -14,8 +13,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Astro Studio CLI
         run: npm i leaf-simplest-round-ride@latest
-      - name: Log in to studio
-        run: npx studio login --session ${{ env.ASTRO_STUDIO_SESSION_ID }}
       - name: Link to studio project
         run: npx studio link --project-id ${{ env.ASTRO_STUDIO_PROJECT_ID }}
       - name: Sync with studio

@@ -7,6 +7,7 @@
     "lint:astro-sync": "pnpm -r exec astro check",
     "lint:tsc": "pnpm -r exec tsc -b",
     "lint:biome": "biome check .",
+    "build": "pnpm -r run build",
     "format": "run-s --continue-on-error format:*",
     "format:biome": "biome check . --apply",
     "format:prettier": "prettier . --write --cache --list-different"

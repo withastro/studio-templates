@@ -6,7 +6,7 @@
     "lint:typegen": "pnpm -r exec studio typegen",
     "lint:astro-sync": "pnpm -r exec astro check",
     "lint:tsc": "pnpm -r exec tsc -b",
-    "lint:biome": "biome check .",
+    "lint:biome": "biome lint .",
     "build": "pnpm -r run build",
     "format": "run-s --continue-on-error format:*",
     "format:biome": "biome check . --apply",

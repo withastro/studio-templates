@@ -1,9 +1,8 @@
-name: Lint
+name: Format
 
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_call:
 
 concurrency:
@@ -16,4 +15,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
-      - run: pnpm run lint
+      - run: pnpm run format
+      - uses: stefanzweifel/git-auto-commit-action@v5

@@ -3,17 +3,21 @@
   "type": "module",
   "scripts": {
     "lint": "run-s --continue-on-error lint:*",
-    "lint:astro-sync": "pnpm -r exec astro sync",
     "lint:typegen": "pnpm -r exec studio typegen",
-    "lint:eslint": "eslint . --fix --cache --cache-file=node_modules/.cache/.eslintcache --report-unused-disable-directives",
-    "lint:prettier": "prettier . --write --cache --list-different",
+    "lint:astro-sync": "pnpm -r exec astro check",
     "lint:tsc": "pnpm -r exec tsc -b",
-    "lint:astro-check": "pnpm -r exec astro check"
+    "lint:biome": "biome check .",
+    "format": "run-s --continue-on-error format:*",
+    "format:biome": "biome check . --apply",
+    "format:prettier": "prettier . --write --cache --list-different"
   },
   "devDependencies": {
-    "@astrojs/site-kit": "github:withastro/site-kit",
+    "@biomejs/biome": "^1.4.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.2",
+    "prettier-plugin-jsdoc": "^1.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "typescript": "^5.2.2"
-  },
-  "prettier": "@astrojs/site-kit/prettier"
+  }
 }

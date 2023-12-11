@@ -1,0 +1,20 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "useTabs": true,
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-jsdoc", "prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": [".*", "*.json", "*.md", "*.toml", "*.yml"],
+      "options": {
+        "useTabs": false
+      }
+    },
+    {
+      "files": ["**/*.astro"],
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}

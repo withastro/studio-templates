@@ -1,5 +1,5 @@
-import { Blog, db } from 'astro:db';
 import { readFile } from 'node:fs/promises';
+import { Blog, db } from 'astro:db';
 
 const lipsum = await readFile(new URL('assets/lipsum.md', import.meta.url), 'utf8');
 

@@ -5,12 +5,16 @@ on:
     branches: [main]
   workflow_call:
 
+permissions:
+  actions: write
+  contents: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint:
+  format:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

@@ -1,19 +1,19 @@
 ---
-import { Blog, db } from "astro:db"
-import { marked } from "marked"
-import BlogPost from "../../layouts/BlogPost.astro"
+import { Blog, db } from 'astro:db';
+import { marked } from 'marked';
+import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-	const posts = await db.select().from(Blog)
+	const posts = await db.select().from(Blog);
 	return posts.map((post) => ({
 		params: { slug: post.slug || post.id },
 		props: { post },
-	}))
+	}));
 }
 type Props = {
-	post: typeof Blog.$inferSelect
-}
-const { post } = Astro.props
+	post: typeof Blog.$inferSelect;
+};
+const { post } = Astro.props;
 ---
 
 <BlogPost {...post}>

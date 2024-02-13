@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
+import db, { NOW, defineCollection, field } from '@astrojs/db';
 import sitemap from '@astrojs/sitemap';
-import db, { defineCollection, field, NOW } from '@astrojs/db';
+import { defineConfig } from 'astro/config';
 import seed from './studio.seed.ts';
 
 export const Blog = defineCollection({
@@ -14,7 +14,7 @@ export const Blog = defineCollection({
 			default: '/blog-placeholder-1.jpg',
 		}),
 		content: field.text({ multiline: true }),
-	}
+	},
 });
 
 // https://astro.build/config
@@ -24,8 +24,8 @@ export default defineConfig({
 	db: {
 		studio: true,
 		collections: {
-			Blog
+			Blog,
 		},
-		data: seed
+		data: seed,
 	},
 });

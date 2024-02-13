@@ -41,5 +41,5 @@ export default defineData(async ({ seed }) => {
 			heroImage: '/blog-placeholder-2.jpg',
 			content: lipsum,
 		},
-	])
-})
+	]);
+});

@@ -1,25 +1,31 @@
+import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig, field } from 'studio-private-beta';
+import db, { defineCollection, field, NOW } from '@astrojs/db';
+import seed from './studio.seed.ts';
+
+export const Blog = defineCollection({
+	fields: {
+		title: field.text(),
+		description: field.text(),
+		slug: field.text({ optional: true }),
+		publishedAt: field.date({ default: NOW }),
+		updatedAt: field.date({ optional: true }),
+		heroImage: field.text({
+			default: '/blog-placeholder-1.jpg',
+		}),
+		content: field.text({ multiline: true }),
+	}
+});
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://example.com',
-	integrations: [sitemap()],
-	studio: {
+	integrations: [db(), sitemap()],
+	db: {
+		studio: true,
 		collections: {
-			Blog: {
-				fields: {
-					title: field.text(),
-					description: field.text(),
-					slug: field.text({ optional: true }),
-					publishedAt: field.date({ default: 'now' }),
-					updatedAt: field.date({ optional: true }),
-					heroImage: field.text({
-						default: '/blog-placeholder-1.jpg',
-					}),
-					content: field.text({ multiline: true }),
-				},
-			},
+			Blog
 		},
+		data: seed
 	},
 });

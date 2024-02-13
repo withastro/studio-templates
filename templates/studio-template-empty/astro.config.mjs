@@ -1,10 +1,13 @@
-import { defineConfig } from 'studio-private-beta';
+import { defineConfig } from 'astro/config';
+import db from '@astrojs/db';
 
 // https://astro.build/config
 export default defineConfig({
-	studio: {
+	integrations: [db()],
+	db: {
+		studio: true,
 		collections: {
-			// Define your studio collections here!
-		},
+			// define your collections here!
+		}
 	},
 });

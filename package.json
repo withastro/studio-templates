@@ -3,7 +3,6 @@
   "type": "module",
   "scripts": {
     "lint": "run-s --continue-on-error lint:*",
-    "lint:typegen": "pnpm -r exec studio typegen",
     "lint:astro-sync": "pnpm -r exec astro check",
     "lint:tsc": "pnpm -r exec tsc -b",
     "lint:biome": "biome lint .",

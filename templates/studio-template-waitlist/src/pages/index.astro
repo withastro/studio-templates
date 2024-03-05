@@ -1,0 +1,56 @@
+---
+import Layout from '@layouts/Default.astro';
+import { db, Signup } from 'astro:db';
+
+if (Astro.request.method === 'POST') {
+  const formData = await new Request(Astro.request.url, {
+    method: Astro.request.method,
+    body: Buffer.from(await Astro.request.arrayBuffer()),
+    headers: Astro.request.headers,
+  }).formData();
+
+  const email = formData.get('email');
+
+  if (typeof email !== 'string') {
+    throw new Error('Unexpected input.');
+  }
+
+  await db
+    .insert(Signup)
+    .values({ email })
+    .then(() => console.log('inserted email'));
+
+  return Astro.redirect('/success');
+}
+---
+
+<Layout>
+  <section
+    class='max-w-screen-sm mx-auto mt-10 md:mt-28 flex flex-col gap-10 justify-center items-center'
+  >
+    <div class='flex flex-col gap-4 items-center justify-center'>
+      <h1 class='mx-8 md:mx-12 text-center'>
+        Be the first to know when we launch 🚀
+      </h1>
+      <p class='text-gray-700 dark:text-[#9DA1BE]'>
+        Get an early invitation to our brand new app.
+      </p>
+    </div>
+    <form
+      class='flex gap-4 flex-col justify-center md:flex-row w-full'
+      method='post'
+      enctype='multipart/form-data'
+    >
+      <input
+        name='email'
+        class='input-large w-full md:w-96'
+        type='email'
+        placeholder='Your email address'
+        class='border'
+        required
+      />
+      <button type='submit' class='w-full md:w-36'>I'm in!</button>
+    </form>
+  </section>
+  <img src='/phone.webp' alt='' class='mx-auto mt-16 md:mt-32' />
+</Layout>

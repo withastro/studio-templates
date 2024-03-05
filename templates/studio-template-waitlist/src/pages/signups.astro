@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Default.astro';
+import { db, Signup } from 'astro:db';
+
+const signups = await db.select().from(Signup);
+---
+
+<Layout>
+  <h1>Signups:</h1>
+  <ul class='list-disc mt-6'>
+    {
+      signups.map((signup) => (
+        <li>
+          <p>{signup.email}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

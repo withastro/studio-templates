@@ -1,4 +1,4 @@
-import { defineTable, column, NOW } from "astro:db";
+import { NOW, column, defineTable } from 'astro:db';
 
 export const Blog = defineTable({
 	columns: {
@@ -9,7 +9,7 @@ export const Blog = defineTable({
 		publishedAt: column.date({ default: NOW }),
 		updatedAt: column.date({ optional: true }),
 		heroImage: column.text({
-			default: "/blog-placeholder-1.jpg",
+			default: '/blog-placeholder-1.jpg',
 		}),
 		content: column.text({ multiline: true }),
 	},

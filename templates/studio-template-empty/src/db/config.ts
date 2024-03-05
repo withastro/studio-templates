@@ -1,3 +1,3 @@
-import { defineDB } from "astro:db";
+import { defineDB } from 'astro:db';
 
 export default defineDB({});

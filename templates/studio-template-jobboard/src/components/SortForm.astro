@@ -1,0 +1,31 @@
+---
+interface Props {
+  sortOptions: { name: string; value: string }[];
+  selectedSort: string;
+}
+
+const { sortOptions, selectedSort } = Astro.props;
+---
+
+<form name='sorting' method='POST' id='sortingForm'>
+  <select id='sorting' name='sort'>
+    {sortOptions.map((sortOption) => (
+      <option
+        value={sortOption.value}
+        selected={selectedSort === sortOption.value ? 'true' : false}
+      >
+        {sortOption.name}
+      </option>
+    ))}
+  </select>
+</form>
+
+<script>
+  document.querySelector('#sorting')?.addEventListener('change', (e) => {
+    e.preventDefault();
+    // @ts-expect-error
+    document.getElementById('sortInput')?.setAttribute('value', document.getElementById('sorting')?.value);
+    // @ts-expect-error
+    document.getElementById('filterForm')?.submit();
+  });
+</script>

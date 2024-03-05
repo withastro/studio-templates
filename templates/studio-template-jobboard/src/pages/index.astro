@@ -1,0 +1,99 @@
+---
+import Layout from '@layouts/Default.astro';
+import JobCard from '@components/JobCard.astro';
+import FormFilter from '@components/FormFilter.astro';
+import JobList from '@components/JobList.astro';
+import JobListHeader from '@components/JobListHeader.astro';
+import { db, eq, JobPosting, like, and, asc, desc, JobType, Company } from 'astro:db';
+
+const jobs = await db
+	.select()
+	.from(JobPosting)
+	.innerJoin(JobType, eq(JobPosting.type, JobType.id))
+	.innerJoin(Company, eq(JobPosting.companyId, Company.id));
+const locations = [...new Set(jobs.map((job) => job.JobPosting.location))];
+const types = await db.select().from(JobType);
+
+let returnedJobs = jobs;
+
+const sortOptions = [
+	{ name: 'Latest First', value: 'desc' },
+	{ name: 'Oldest First', value: 'asc' },
+];
+
+if (Astro.request.method === 'POST') {
+	try {
+		const data = await Astro.request.formData();
+
+		const sort = data.get('sort');
+		const location = data.get('location');
+		const type = data.get('type');
+		const keyword = data.get('keyword');
+
+		return Astro.redirect(`/?location=${location}&type=${type}&keyword=${keyword}&sort=${sort}`);
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error(error.message);
+		}
+	}
+}
+
+let prefilled = Astro.url.searchParams;
+
+const keyword = prefilled?.get('keyword');
+const type = prefilled?.get('type');
+const location = prefilled?.get('location');
+
+const query = db
+	.select()
+	.from(JobPosting)
+	.innerJoin(JobType, eq(JobPosting.type, JobType.id))
+	.innerJoin(Company, eq(JobPosting.companyId, Company.id));
+
+query.where(
+	and(
+		like(JobPosting.title, keyword === null ? `%%` : `%${keyword}%`),
+		// @ts-ignore
+		type !== '' && typeof type === 'string' ? eq(JobType.value, type) : true,
+		// @ts-ignore
+		location !== '' && typeof location === 'string' ? eq(JobPosting.location, location) : true,
+	),
+);
+
+const sorting = Astro.url.searchParams.get('sort') ?? 'desc';
+if (sorting != null) {
+	if (sorting === 'asc') {
+		query.orderBy(asc(JobPosting.posted));
+	} else if (sorting === 'desc') {
+		query.orderBy(desc(JobPosting.posted));
+	}
+}
+
+returnedJobs = await query.execute();
+---
+
+<Layout>
+	<section class="relative mb-10 mt-32">
+		<img class="absolute -bottom-10 right-0 -z-10" src="/bg-header.svg" />
+		<h1>Your new career is waiting</h1>
+		<FormFilter {prefilled} {types} {locations} {sorting} {location} {type} />
+	</section>
+	<JobList>
+		{
+			returnedJobs.length > 0 ? (
+				<>
+					<JobListHeader numberOfJobs={returnedJobs.length} selectedSort={sorting} {sortOptions} />
+					<ul class="flex flex-col gap-4">
+						{returnedJobs.map((job) => (
+							<JobCard job={job.JobPosting} type={job.JobType} company={job.Company} />
+						))}
+					</ul>
+				</>
+			) : (
+				<>
+					<p>No jobs found for the selected filter 🤷‍♂️</p>
+				</>
+			)
+		}
+	</JobList>
+</Layout>

@@ -1,0 +1,27 @@
+---
+import Keyword from './filter/Keyword.astro';
+import Type from './filter/Type.astro';
+import Location from './filter/Location.astro';
+import type { JobType } from 'astro:db';
+
+interface Props {
+  prefilled?: URLSearchParams;
+  types: typeof JobType.$inferSelect[];
+  locations: string[];
+  type: string | null;
+  location: string | null;
+  sorting: string;
+}
+
+const { prefilled, types, locations, type, location, sorting } = Astro.props;
+---
+
+<form class='mt-6 flex md:flex-row flex-col gap-4' method='post' id="filterForm" name="filterForm">
+  <Keyword {prefilled} />
+  <Type {type} {types} />
+  <Location {location} {locations} />
+  <input type="hidden" name="sort" id="sortInput" value={sorting} />
+  <button type='submit' class='button button-black button-large w-full md:w-40'
+    >Search</button
+  >
+</form>

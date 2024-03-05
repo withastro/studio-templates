@@ -1,0 +1,25 @@
+---
+import Discord from '@assets/Discord.astro';
+import GitHub from '@assets/GitHub.astro';
+import Mastodon from '@assets/Mastodon.astro';
+import X from '@assets/x.astro';
+---
+
+<header class='flex justify-between items-center my-6'>
+  <a href='/' class='text-[#2A0050] dark:text-[#FF92E8] font-bold'>Nexus Careers</a>
+  <ul class='hidden md:flex justify-end gap-4'>
+    <li><a href="https://x.com/astrodotbuild"><X /></a></li>
+    <li><a href="https://astro.build/chat"><Discord /></a></li>
+    <li><a href="https://github.com/withastro"><GitHub /></a></li>
+    <li><a href="https://m.webtoo.ls/@astro"><Mastodon /></a></li>
+  </ul>
+</header>
+
+<style>
+  a {
+    @apply hover:text-[#2A0050] dark:hover:text-[#FF92E8] transition-colors duration-300;
+  }
+  a svg {
+    @apply size-3 md:size-6;
+  }
+</style>

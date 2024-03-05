@@ -1,0 +1,99 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Spline+Sans:wght@400;600;700&display=swap');
+
+.font-mono {
+  font-family: 'Azeret Mono', monospace;
+}
+
+/* defaults */
+body {
+  font-family: 'Spline Sans', sans-serif;
+  @apply text-gray-950;
+
+  footer {
+    @apply text-[#5E638D];
+    a {
+      @apply hover:text-gray-900 dark:hover:text-gray-50;
+    }
+  }
+}
+
+section, footer, header {
+  @apply px-6 sm:px-12 lg:px-48;
+}
+
+
+/* darkmode */
+html.dark {
+  body {
+    @apply text-white bg-black;
+  }
+}
+
+/* Design system */
+h1 {
+  @apply font-bold text-3xl md:text-5xl;
+}
+
+h2 {
+  @apply font-bold text-4xl;
+}
+
+h3 {
+  @apply font-bold text-3xl
+}
+
+h4 {
+  @apply font-bold text-2xl;
+}
+
+h5 {
+  @apply font-bold text-xl;
+}
+
+p {
+  @apply text-base font-normal;
+  @apply text-[#4C5071] dark:text-[#7C81A7];
+  
+  &.body-sm {
+    @apply text-sm;
+  }
+  &.body-xs {
+    @apply text-xs;
+  }
+  &.font-mono-sm {
+    @apply font-mono text-sm;
+  }
+}
+
+input {
+  @apply px-4 py-2 text-[#7C81A7] dark:text-[#4C5071] dark:bg-black dark:border-[#27293A] border rounded-md;
+  &.input-large {
+    @apply text-xl;
+  }
+}
+
+select {
+  @apply px-4 py-2 text-[#7C81A7] dark:text-[#4C5071] dark:bg-black dark:border-[#27293A] border rounded-md;
+  /* &.input-large {
+    @apply text-xl;
+  } */
+}
+
+button {
+  @apply !bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
+  @apply py-2 px-4 rounded-md text-white border-none;
+}
+
+a.button, button.button {
+  @apply py-3 px-4 text-white text-xs rounded-md font-semibold;
+  &.button-black {
+    @apply bg-gradient-to-b from-[#393D56] to-[#15161F];
+  }
+  &.button-primary {
+    @apply bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
+  }
+  &-large {
+    @apply text-base;
+  }
+}

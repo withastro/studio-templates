@@ -1,0 +1,24 @@
+---
+interface Props {
+  location: string | null
+  locations: string[]
+}
+
+const { location, locations } = Astro.props
+---
+
+<select class='flex-1' name='location'>
+  <option value=''
+    >All locations</option
+  >
+  {
+    locations.map((locationOption) => (
+      <option
+        value={locationOption}
+        selected={location === locationOption ? 'true' : false}
+      >
+        {locationOption}
+      </option>
+    ))
+  }
+</select>

@@ -1,0 +1,28 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-node
+
+      # astro db projects can't be built in CI at the moment,
+      # which means we can't typecheck either
+      # - name: Build
+      # - run: pnpm run build
+      # - name: Typecheck
+      # - run: pnpm run typecheck
+
+      - name: Lint
+        run: pnpm run lint

@@ -1,25 +1,21 @@
 ---
-import type { JobType } from 'astro:db'
+import type { JobType } from 'astro:db';
 
 interface Props {
-  type: string | null
-  types: typeof JobType.$inferSelect[]
+	type: string | null;
+	types: (typeof JobType.$inferSelect)[];
 }
 
 const { type, types } = Astro.props;
 ---
-<select class='flex-1' name='type'>
-  <option value=''
-    >All types</option
-  >
-  {
-    types.map((typeOption) => (
-      <option
-        value={typeOption.value}
-        selected={type === typeOption.value ? 'true' : false}
-      >
-        {typeOption.title}
-      </option>
-    ))
-  }
+
+<select class="flex-1" name="type">
+	<option value="">All types</option>
+	{
+		types.map((typeOption) => (
+			<option value={typeOption.value} selected={type === typeOption.value ? 'true' : false}>
+				{typeOption.title}
+			</option>
+		))
+	}
 </select>

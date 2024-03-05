@@ -1,14 +1,15 @@
 ---
 interface Props {
-  prefilled?: URLSearchParams;
+	prefilled?: URLSearchParams;
 }
 
 const { prefilled } = Astro.props;
 ---
+
 <input
-    class='flex-1'
-    name='keyword'
-    type='search'
-    placeholder='Job title or keyword'
-    value={prefilled?.get('keyword') ?? ''}
+	class="flex-1"
+	name="keyword"
+	type="search"
+	placeholder="Job title or keyword"
+	value={prefilled?.get('keyword') ?? ''}
 />

@@ -1,4 +1,4 @@
-import { defineTable, column, NOW } from "astro:db";
+import { NOW, column, defineTable } from 'astro:db';
 
 export const Company = defineTable({
 	columns: {

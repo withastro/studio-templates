@@ -5,37 +5,38 @@ import { Company, JobPosting, JobType } from 'astro:db';
 import { Image } from 'astro:assets';
 
 interface Props {
-  job: typeof JobPosting.$inferSelect;
-  company: typeof Company.$inferSelect;
-  type: typeof JobType.$inferSelect;
+	job: typeof JobPosting.$inferSelect;
+	company: typeof Company.$inferSelect;
+	type: typeof JobType.$inferSelect;
 }
 
 const { job, company, type } = Astro.props;
 ---
 
-<li class='flex flex-col bg-white dark:bg-black rounded-sm p-6'>
-  <div class='flex flex-col md:flex-row md:justify-between md:items-start'>
-    <div class='flex md:flex-row flex-col items-center gap-4'>
-      <Image alt="" src={company.logo} class='rounded-md flex-shrink-0 size-20' inferSize />
-      <div class="md:text-left text-center">
-        <h4>{job.title}</h4>
-        <p class=''>
-          <span class='font-semibold'>{company.title}</span>: {job.description}
-        </p>
-      </div>
-    </div>
-    <a href={`/jobs/${job.id}`} class='mx-auto md:mx-0 mt-4 md:mt-0 button button-primary w-40 text-center'
-      >Read more</a
-    >
-  </div>
-  <hr class='my-6 dark:border-gray-800' />
-  <div class='flex sm:flex-row flex-col gap-4 justify-between items-center'>
-    <div class='flex gap-2'>
-      <TypeBadge>{type.title}</TypeBadge>
-      <LocationBadge>{job.location}</LocationBadge>
-    </div>
-    <p class='font-mono text-sm'>
-      Posted on {new Date(job.posted).toLocaleDateString()}
-    </p>
-  </div>
+<li class="flex flex-col rounded-sm bg-white p-6 dark:bg-black">
+	<div class="flex flex-col md:flex-row md:items-start md:justify-between">
+		<div class="flex flex-col items-center gap-4 md:flex-row">
+			<Image alt="" src={company.logo} class="size-20 flex-shrink-0 rounded-md" inferSize />
+			<div class="text-center md:text-left">
+				<h4>{job.title}</h4>
+				<p class="">
+					<span class="font-semibold">{company.title}</span>: {job.description}
+				</p>
+			</div>
+		</div>
+		<a
+			href={`/jobs/${job.id}`}
+			class="button button-primary mx-auto mt-4 w-40 text-center md:mx-0 md:mt-0">Read more</a
+		>
+	</div>
+	<hr class="my-6 dark:border-gray-800" />
+	<div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+		<div class="flex gap-2">
+			<TypeBadge>{type.title}</TypeBadge>
+			<LocationBadge>{job.location}</LocationBadge>
+		</div>
+		<p class="font-mono text-sm">
+			Posted on {new Date(job.posted).toLocaleDateString()}
+		</p>
+	</div>
 </li>

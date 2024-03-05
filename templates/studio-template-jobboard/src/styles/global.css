@@ -2,98 +2,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Spline+Sans:wght@400;600;700&display=swap');
 
 .font-mono {
-  font-family: 'Azeret Mono', monospace;
+	font-family: 'Azeret Mono', monospace;
 }
 
 /* defaults */
 body {
-  font-family: 'Spline Sans', sans-serif;
-  @apply text-gray-950;
+	font-family: 'Spline Sans', sans-serif;
+	@apply text-gray-950;
 
-  footer {
-    @apply text-[#5E638D];
-    a {
-      @apply hover:text-gray-900 dark:hover:text-gray-50;
-    }
-  }
+	footer {
+		@apply text-[#5E638D];
+		a {
+			@apply hover:text-gray-900 dark:hover:text-gray-50;
+		}
+	}
 }
 
-section, footer, header {
-  @apply px-6 sm:px-12 lg:px-48;
+section,
+footer,
+header {
+	@apply px-6 sm:px-12 lg:px-48;
 }
-
 
 /* darkmode */
 html.dark {
-  body {
-    @apply text-white bg-black;
-  }
+	body {
+		@apply bg-black text-white;
+	}
 }
 
 /* Design system */
 h1 {
-  @apply font-bold text-3xl md:text-5xl;
+	@apply text-3xl font-bold md:text-5xl;
 }
 
 h2 {
-  @apply font-bold text-4xl;
+	@apply text-4xl font-bold;
 }
 
 h3 {
-  @apply font-bold text-3xl
+	@apply text-3xl font-bold;
 }
 
 h4 {
-  @apply font-bold text-2xl;
+	@apply text-2xl font-bold;
 }
 
 h5 {
-  @apply font-bold text-xl;
+	@apply text-xl font-bold;
 }
 
 p {
-  @apply text-base font-normal;
-  @apply text-[#4C5071] dark:text-[#7C81A7];
-  
-  &.body-sm {
-    @apply text-sm;
-  }
-  &.body-xs {
-    @apply text-xs;
-  }
-  &.font-mono-sm {
-    @apply font-mono text-sm;
-  }
+	@apply text-base font-normal;
+	@apply text-[#4C5071] dark:text-[#7C81A7];
+
+	&.body-sm {
+		@apply text-sm;
+	}
+	&.body-xs {
+		@apply text-xs;
+	}
+	&.font-mono-sm {
+		@apply font-mono text-sm;
+	}
 }
 
 input {
-  @apply px-4 py-2 text-[#7C81A7] dark:text-[#4C5071] dark:bg-black dark:border-[#27293A] border rounded-md;
-  &.input-large {
-    @apply text-xl;
-  }
+	@apply rounded-md border px-4 py-2 text-[#7C81A7] dark:border-[#27293A] dark:bg-black dark:text-[#4C5071];
+	&.input-large {
+		@apply text-xl;
+	}
 }
 
 select {
-  @apply px-4 py-2 text-[#7C81A7] dark:text-[#4C5071] dark:bg-black dark:border-[#27293A] border rounded-md;
-  /* &.input-large {
+	@apply rounded-md border px-4 py-2 text-[#7C81A7] dark:border-[#27293A] dark:bg-black dark:text-[#4C5071];
+	/* &.input-large {
     @apply text-xl;
   } */
 }
 
 button {
-  @apply !bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
-  @apply py-2 px-4 rounded-md text-white border-none;
+	@apply !bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
+	@apply rounded-md border-none px-4 py-2 text-white;
 }
 
-a.button, button.button {
-  @apply py-3 px-4 text-white text-xs rounded-md font-semibold;
-  &.button-black {
-    @apply bg-gradient-to-b from-[#393D56] to-[#15161F];
-  }
-  &.button-primary {
-    @apply bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
-  }
-  &-large {
-    @apply text-base;
-  }
+a.button,
+button.button {
+	@apply rounded-md px-4 py-3 text-xs font-semibold text-white;
+	&.button-black {
+		@apply bg-gradient-to-b from-[#393D56] to-[#15161F];
+	}
+	&.button-primary {
+		@apply bg-gradient-to-b from-[#AF00CA] to-[#CF3F7E];
+	}
+	&-large {
+		@apply text-base;
+	}
 }

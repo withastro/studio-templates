@@ -9,54 +9,58 @@ import { Image } from 'astro:assets';
 export const prerender = true;
 
 export const getStaticPaths = (async () => {
-  const jobs = await db.select().from(JobPosting).innerJoin(JobType, eq(JobPosting.type, JobType.id)).innerJoin(Company, eq(JobPosting.companyId, Company.id));
+	const jobs = await db
+		.select()
+		.from(JobPosting)
+		.innerJoin(JobType, eq(JobPosting.type, JobType.id))
+		.innerJoin(Company, eq(JobPosting.companyId, Company.id));
 
-  return jobs.map((job) => ({
-    params: {
-      slug: job.JobPosting.id,
-    },
-    props: {
-      job: job.JobPosting,
-      company: job.Company,
-      type: job.JobType,
-    },
-  }));
+	return jobs.map((job) => ({
+		params: {
+			slug: job.JobPosting.id,
+		},
+		props: {
+			job: job.JobPosting,
+			company: job.Company,
+			type: job.JobType,
+		},
+	}));
 }) satisfies GetStaticPaths;
 
 interface Props {
-  job: typeof JobPosting.$inferSelect;
-  company: typeof Company.$inferSelect;
-  type: typeof JobType.$inferSelect;
+	job: typeof JobPosting.$inferSelect;
+	company: typeof Company.$inferSelect;
+	type: typeof JobType.$inferSelect;
 }
 
 const { job, company, type } = Astro.props;
 ---
 
 <Layout>
-  <section class='mt-12 md:mt-32 mb-10'>
-    <img class='absolute inset-0 right-0 -z-10' src='/bg-header.svg' />
-    <h1>{job.title}</h1>
-  </section>
-  <section class='py-10 flex md:flex-row flex-col gap-10 bg-[#E1E2EB] dark:bg-[#15161F]'>
-    <div
-      class='bg-white dark:bg-black rounded-md border-1 w-full p-4 sm:p-8 md:p-16 prose dark:prose-invert'
-      set:html={job.richText}
-    />
-    <div class='flex flex-col items-center text-center gap-6'>
-      <Image alt="" src={company.logo} class='size-28 rounded-md flex-shrink-0' inferSize/>
-      <div>
-        <h2>{company.title}</h2>
-        <p class='font-normal'>{job.description}</p>
-      </div>
-      <hr class='w-full border-[#BFC1D4]' />
-      <div class='flex gap-2'>
-        <TypeBadge>{type.title}</TypeBadge>
-        <LocationBadge>{job.location}</LocationBadge>
-      </div>
-      <p class='font-mono text-xs self-start'>
-        Posted {job.posted.toLocaleDateString()}
-      </p>
-      <button class='w-full'>Apply</button>
-    </div>
-  </section>
+	<section class="mb-10 mt-12 md:mt-32">
+		<img class="absolute inset-0 right-0 -z-10" src="/bg-header.svg" />
+		<h1>{job.title}</h1>
+	</section>
+	<section class="flex flex-col gap-10 bg-[#E1E2EB] py-10 md:flex-row dark:bg-[#15161F]">
+		<div
+			class="border-1 prose dark:prose-invert w-full rounded-md bg-white p-4 sm:p-8 md:p-16 dark:bg-black"
+			set:html={job.richText}
+		/>
+		<div class="flex flex-col items-center gap-6 text-center">
+			<Image alt="" src={company.logo} class="size-28 flex-shrink-0 rounded-md" inferSize />
+			<div>
+				<h2>{company.title}</h2>
+				<p class="font-normal">{job.description}</p>
+			</div>
+			<hr class="w-full border-[#BFC1D4]" />
+			<div class="flex gap-2">
+				<TypeBadge>{type.title}</TypeBadge>
+				<LocationBadge>{job.location}</LocationBadge>
+			</div>
+			<p class="self-start font-mono text-xs">
+				Posted {job.posted.toLocaleDateString()}
+			</p>
+			<button class="w-full">Apply</button>
+		</div>
+	</section>
 </Layout>

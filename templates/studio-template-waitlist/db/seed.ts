@@ -1,9 +1,10 @@
-import { Signup, db } from 'astro:db';
+import { db, Signup } from 'astro:db';
 
-await db
-	.insert(Signup)
-	.values([
-		{ email: 'hello@elian.codes' },
-		{ email: 'fred@astro.build' },
-		{ email: 'ben@astro.build' },
-	]);
+// https://astro.build/db/seed
+export default async function seed() {
+	await db
+		.insert(Signup)
+		.values([
+			{ email: 'houston@astro.build' },
+		]);
+}

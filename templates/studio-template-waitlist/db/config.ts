@@ -1,4 +1,4 @@
-import { defineDB, defineTable, column } from 'astro:db';
+import { column, defineDB, defineTable } from 'astro:db';
 
 export const Signup = defineTable({
 	columns: {

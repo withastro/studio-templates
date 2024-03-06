@@ -1,5 +1,5 @@
-import { db, Blog } from 'astro:db';
 import { readFile } from 'node:fs/promises';
+import { Blog, db } from 'astro:db';
 
 // https://astro.build/db/seed
 export default async function seed() {
@@ -42,5 +42,4 @@ export default async function seed() {
 			content: lipsum,
 		},
 	]);
-
 }

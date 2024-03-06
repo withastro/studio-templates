@@ -1,8 +1,23 @@
-import { Blog } from './collections';
-import { defineDB } from 'astro:db';
+import { defineDB, defineTable, column, NOW } from 'astro:db';
 
+const Blog = defineTable({
+	columns: {
+		id: column.number({ primaryKey: true }),
+		title: column.text(),
+		description: column.text(),
+		slug: column.text({ optional: true }),
+		publishedAt: column.date({ default: NOW }),
+		updatedAt: column.date({ optional: true }),
+		heroImage: column.text({
+			default: '/blog-placeholder-1.jpg',
+		}),
+		content: column.text({ multiline: true }),
+	},
+}),
+
+// https://astro.build/db/config
 export default defineDB({
 	tables: {
-		Blog,
+		Blog
 	},
 });

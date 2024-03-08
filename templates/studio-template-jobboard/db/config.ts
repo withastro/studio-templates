@@ -1,4 +1,4 @@
-import { NOW, column, defineDB, defineTable } from 'astro:db';
+import { NOW, column, defineDb, defineTable } from 'astro:db';
 
 export const Company = defineTable({
 	columns: {
@@ -31,7 +31,7 @@ export const JobPosting = defineTable({
 });
 
 // https://astro.build/db/config
-export default defineDB({
+export default defineDb({
 	tables: {
 		JobPosting,
 		Company,

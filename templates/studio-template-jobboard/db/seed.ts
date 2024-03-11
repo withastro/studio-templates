@@ -1,6 +1,5 @@
 import { Company, JobPosting, JobType, db } from 'astro:db';
 
-// https://astro.build/db/seed
 export default async function seed() {
 	const companies = await db
 		.insert(Company)

@@ -1,12 +1,12 @@
 // @ts-check
 
-import { build, dev } from 'astro';
 import assert from 'node:assert';
 import { existsSync } from 'node:fs';
 import { readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
 import { fileURLToPath } from 'node:url';
+import { build, dev } from 'astro';
 
 const templatesDir = join(fileURLToPath(import.meta.url), '../../templates');
 

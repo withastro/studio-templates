@@ -9,7 +9,8 @@
       "style": {
         "noNonNullAssertion": "warn"
       }
-    }
+    },
+    "ignore": [".astro/**/*"]
   },
   "json": {
     "parser": {

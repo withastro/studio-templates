@@ -12,8 +12,8 @@ importers:
         specifier: 1.6.1
         version: 1.6.1
       astro:
-        specifier: ^4.5.5
-        version: 4.5.5(typescript@5.4.2)
+        specifier: ^4.5.6
+        version: 4.5.6(typescript@5.4.2)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -36,8 +36,8 @@ importers:
   templates/studio-template-blog:
     dependencies:
       '@astrojs/db':
-        specifier: ^0.8.6
-        version: 0.8.6
+        specifier: ^0.8.8
+        version: 0.8.8
       '@astrojs/rss':
         specifier: ^4.0.5
         version: 4.0.5
@@ -45,8 +45,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       astro:
-        specifier: ^4.5.5
-        version: 4.5.5(@types/node@20.10.4)(typescript@5.4.2)
+        specifier: ^4.5.6
+        version: 4.5.6(@types/node@20.10.4)(typescript@5.4.2)
       marked:
         specifier: ^11.0.1
         version: 11.0.1
@@ -64,11 +64,11 @@ importers:
   templates/studio-template-empty:
     dependencies:
       '@astrojs/db':
-        specifier: ^0.8.6
-        version: 0.8.6
+        specifier: ^0.8.8
+        version: 0.8.8
       astro:
-        specifier: ^4.5.5
-        version: 4.5.5(typescript@5.4.2)
+        specifier: ^4.5.6
+        version: 4.5.6(typescript@5.4.2)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.5.9
@@ -83,17 +83,17 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(prettier-plugin-astro@0.13.0)(prettier@3.1.1)(typescript@5.4.2)
       '@astrojs/db':
-        specifier: ^0.8.6
-        version: 0.8.6
+        specifier: ^0.8.8
+        version: 0.8.8
       '@astrojs/node':
-        specifier: ^8.2.3
-        version: 8.2.3(astro@4.5.5)
+        specifier: ^8.2.4
+        version: 8.2.4(astro@4.5.6)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.5.5)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.5.5
-        version: 4.5.5(typescript@5.4.2)
+        specifier: ^4.5.6
+        version: 4.5.6(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -114,17 +114,17 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(prettier-plugin-astro@0.13.0)(prettier@3.1.1)(typescript@5.4.2)
       '@astrojs/db':
-        specifier: ^0.8.6
-        version: 0.8.6
+        specifier: ^0.8.8
+        version: 0.8.8
       '@astrojs/node':
-        specifier: ^8.2.3
-        version: 8.2.3(astro@4.5.5)
+        specifier: ^8.2.4
+        version: 8.2.4(astro@4.5.6)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.5.5)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.5.5
-        version: 4.5.5(@types/node@20.11.24)(typescript@5.4.2)
+        specifier: ^4.5.6
+        version: 4.5.6(@types/node@20.11.24)(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -171,8 +171,8 @@ packages:
   /@astrojs/compiler@2.7.0:
     resolution: {integrity: sha512-XpC8MAaWjD1ff6/IfkRq/5k1EFj6zhCNqXRd5J43SVJEBj/Bsmizkm8N0xOYscGcDFQkRgEw6/eKnI5x/1l6aA==}
 
-  /@astrojs/db@0.8.6:
-    resolution: {integrity: sha512-iJ4EmOtGZKjblBj66RvxE+9yyhJ/0i0mhngPK4O8O82zAnAasATkATEoH2DjoxaiIQq3O9snZg8tDpy/cec5Lw==}
+  /@astrojs/db@0.8.8:
+    resolution: {integrity: sha512-tTIXt0oSSgcT33UARUkWBAnP1I0ihrp0cI7qvaIDM9yCSlg849HH5hCTVwOOIV4uDDwmYRhdfclvFnL8oma7gw==}
     dependencies:
       '@libsql/client': 0.5.6
       async-listen: 3.0.1
@@ -273,12 +273,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.3(astro@4.5.5):
-    resolution: {integrity: sha512-VQQy7QIv4X+5dlKCEchYIxMFryS+BwDOFGNzeRmHe1/P819TlNup9/M8XqnWW4aZPxV7P6CoDeFxX6HuT/kOmQ==}
+  /@astrojs/node@8.2.4(astro@4.5.6):
+    resolution: {integrity: sha512-5Wvtnm4fv9Vp/OJ5UeMRWMBy2KOJGCMgfwg05qqadtnHYeJHgoAR6hK06ox+7HBvf/+X/iL67muPPq3jKucX/w==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.5.5(typescript@5.4.2)
+      astro: 4.5.6(typescript@5.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -305,13 +305,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.5.5)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.5.6)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.5.5(typescript@5.4.2)
+      astro: 4.5.6(typescript@5.4.2)
       autoprefixer: 10.4.18(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -1427,8 +1427,8 @@ packages:
       is-shared-array-buffer: 1.0.2
     dev: true
 
-  /astro@4.5.5(@types/node@20.10.4)(typescript@5.4.2):
-    resolution: {integrity: sha512-gZ3jR06dLmY9/SMkKMr+3pRSrUjhuwjnXt+9abFJV3WGwhCnLZbSNsTBrLMsaFHpAS1ReJChcTWyKRCvs/jCIQ==}
+  /astro@4.5.6(@types/node@20.10.4)(typescript@5.4.2):
+    resolution: {integrity: sha512-/pXr+tDvgps1x3w+9i48XzfNPDr4NrT89EJPeCTL57IjaTpitSQ8Oy10Fv6zAqXNLIUJ5j3P1c+fJx+taKIg0g==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -1508,8 +1508,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.5.5(@types/node@20.11.24)(typescript@5.4.2):
-    resolution: {integrity: sha512-gZ3jR06dLmY9/SMkKMr+3pRSrUjhuwjnXt+9abFJV3WGwhCnLZbSNsTBrLMsaFHpAS1ReJChcTWyKRCvs/jCIQ==}
+  /astro@4.5.6(@types/node@20.11.24)(typescript@5.4.2):
+    resolution: {integrity: sha512-/pXr+tDvgps1x3w+9i48XzfNPDr4NrT89EJPeCTL57IjaTpitSQ8Oy10Fv6zAqXNLIUJ5j3P1c+fJx+taKIg0g==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -1589,8 +1589,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.5.5(typescript@5.4.2):
-    resolution: {integrity: sha512-gZ3jR06dLmY9/SMkKMr+3pRSrUjhuwjnXt+9abFJV3WGwhCnLZbSNsTBrLMsaFHpAS1ReJChcTWyKRCvs/jCIQ==}
+  /astro@4.5.6(typescript@5.4.2):
+    resolution: {integrity: sha512-/pXr+tDvgps1x3w+9i48XzfNPDr4NrT89EJPeCTL57IjaTpitSQ8Oy10Fv6zAqXNLIUJ5j3P1c+fJx+taKIg0g==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:

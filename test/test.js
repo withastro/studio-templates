@@ -15,10 +15,9 @@ for (const template of await readdir(templatesDir)) {
 		const rootUrl = new URL(template, templatesDir);
 		const root = fileURLToPath(rootUrl);
 
-		const dbPath = new URL('.astro/content.db', `${rootUrl.href}/`);
-		process.env.ASTRO_DATABASE_FILE = dbPath.href;
-
 		it('builds successfully', async () => {
+			const dbPath = new URL('.astro/content.db', `${rootUrl.href}/`);
+			process.env.ASTRO_DATABASE_FILE = dbPath.href;
 			await build({ root, logLevel: 'error' });
 			const distDir = join(root, 'dist');
 			assert.ok(

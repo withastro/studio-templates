@@ -5,15 +5,15 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build --remote",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/db": "^0.8.8",
+    "@astrojs/db": "^0.9.7",
     "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.1.1",
-    "astro": "^4.5.9",
+    "@astrojs/sitemap": "^3.1.2",
+    "astro": "^4.5.10",
     "marked": "^11.0.1"
   },
   "devDependencies": {

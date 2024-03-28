@@ -8,11 +8,15 @@ import { describe, it } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { build, dev } from 'astro';
 
-const templatesDir = join(fileURLToPath(import.meta.url), '../../templates');
+const templatesDir = new URL('../templates/', import.meta.url);
 
 for (const template of await readdir(templatesDir)) {
 	describe(template, () => {
-		const root = join(templatesDir, template);
+		const rootUrl = new URL(template, templatesDir);
+		const root = fileURLToPath(rootUrl);
+
+		const dbPath = new URL('.astro/content.db', `${rootUrl.href}/`);
+		process.env.ASTRO_DATABASE_FILE = dbPath.href;
 
 		it('builds successfully', async () => {
 			await build({ root, logLevel: 'error' });

@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/db": "^0.9.7",
+    "@astrojs/db": "^0.9.8",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.2",
-    "astro": "^4.5.10",
+    "astro": "^4.5.12",
     "marked": "^11.0.1"
   },
   "devDependencies": {

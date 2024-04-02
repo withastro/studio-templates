@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
-    "@astrojs/db": "^0.9.8",
+    "@astrojs/db": "^0.9.9",
     "@astrojs/node": "^8.2.5",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.5.12",
+    "astro": "^4.5.13",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
   },

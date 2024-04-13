@@ -12,8 +12,8 @@ importers:
         specifier: 1.6.1
         version: 1.6.1
       astro:
-        specifier: ^4.6.0
-        version: 4.6.0(typescript@5.4.2)
+        specifier: ^4.6.1
+        version: 4.6.1(typescript@5.4.2)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -36,8 +36,8 @@ importers:
   templates/studio-template-blog:
     dependencies:
       '@astrojs/db':
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.10.4
+        version: 0.10.4
       '@astrojs/rss':
         specifier: ^4.0.5
         version: 4.0.5
@@ -45,8 +45,8 @@ importers:
         specifier: ^3.1.2
         version: 3.1.2
       astro:
-        specifier: ^4.6.0
-        version: 4.6.0(@types/node@20.10.4)(typescript@5.4.2)
+        specifier: ^4.6.1
+        version: 4.6.1(@types/node@20.10.4)(typescript@5.4.2)
       marked:
         specifier: ^11.0.1
         version: 11.0.1
@@ -64,11 +64,11 @@ importers:
   templates/studio-template-empty:
     dependencies:
       '@astrojs/db':
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.10.4
+        version: 0.10.4
       astro:
-        specifier: ^4.6.0
-        version: 4.6.0(typescript@5.4.2)
+        specifier: ^4.6.1
+        version: 4.6.1(typescript@5.4.2)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.5.10
@@ -83,17 +83,17 @@ importers:
         specifier: ^0.5.10
         version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.1.1)(typescript@5.4.2)
       '@astrojs/db':
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.10.4
+        version: 0.10.4
       '@astrojs/node':
         specifier: ^8.2.5
-        version: 8.2.5(astro@4.6.0)
+        version: 8.2.5(astro@4.6.1)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.6.0)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.6.0
-        version: 4.6.0(typescript@5.4.2)
+        specifier: ^4.6.1
+        version: 4.6.1(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -114,17 +114,17 @@ importers:
         specifier: ^0.5.10
         version: 0.5.10(prettier-plugin-astro@0.13.0)(prettier@3.1.1)(typescript@5.4.2)
       '@astrojs/db':
-        specifier: ^0.10.3
-        version: 0.10.3
+        specifier: ^0.10.4
+        version: 0.10.4
       '@astrojs/node':
         specifier: ^8.2.5
-        version: 8.2.5(astro@4.6.0)
+        version: 8.2.5(astro@4.6.1)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.6.0)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.6.0
-        version: 4.6.0(@types/node@20.11.24)(typescript@5.4.2)
+        specifier: ^4.6.1
+        version: 4.6.1(@types/node@20.11.24)(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -171,8 +171,8 @@ packages:
   /@astrojs/compiler@2.7.1:
     resolution: {integrity: sha512-/POejAYuj8WEw7ZI0J8JBvevjfp9jQ9Wmu/Bg52RiNwGXkMV7JnYpsenVfHvvf1G7R5sXHGKlTcxlQWhoUTiGQ==}
 
-  /@astrojs/db@0.10.3:
-    resolution: {integrity: sha512-ly6M5q5u4GaMTEVwgLT89Frrm0PjgLRDBUV2bj6ZQHZSi/YtaF/1NcblVQgz2xvFFq+11tkjAmJBFxZXW5GPvA==}
+  /@astrojs/db@0.10.4:
+    resolution: {integrity: sha512-6A7UQPZZ4wQuA7JuhZ5N2/aqOECLj62+mjLC1iRFVkUTXpU251hKrZubAt0BqOdvNTuei8DNxSWuK+krFkngzA==}
     dependencies:
       '@libsql/client': 0.5.6
       async-listen: 3.0.1
@@ -277,12 +277,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.5(astro@4.6.0):
+  /@astrojs/node@8.2.5(astro@4.6.1):
     resolution: {integrity: sha512-IdVD4dBNyg+ScmCATZ0FM7vNLAHq0TSdiJ3LpR4jcWIUhpN1ps5Jg+9CfzMaLmCCe/SJUZejK5EnzqUJdnGYyg==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.6.0(typescript@5.4.2)
+      astro: 4.6.1(typescript@5.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -309,13 +309,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.6.0)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.6.1)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.6.0(typescript@5.4.2)
+      astro: 4.6.1(typescript@5.4.2)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -1162,7 +1162,7 @@ packages:
       '@libsql/core': 0.5.6
       '@libsql/hrana-client': 0.5.6
       js-base64: 3.7.7
-      libsql: 0.3.11
+      libsql: 0.3.12
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -1175,16 +1175,16 @@ packages:
       js-base64: 3.7.7
     dev: false
 
-  /@libsql/darwin-arm64@0.3.11:
-    resolution: {integrity: sha512-eTO2UZFxp/kmp31OApCpXJYpZQ1iJ/Qg6fA3sYGHFHBVE9ALTvm+QMHsuMh1LL2HT6CnfS3kDA9dCCE52qVqFQ==}
+  /@libsql/darwin-arm64@0.3.12:
+    resolution: {integrity: sha512-rBiMebxLgsShSEg73CibeuenlUMKXnaW/XoUk3tii1C1U7141w6k5VuF6/jnNl/cS7PMK/vy+2V5N/k++yvb9A==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/darwin-x64@0.3.11:
-    resolution: {integrity: sha512-N3EeLgqya/JJan6aADcRFJlBGCOHJrcUpUr1cTEepyrEirrJzPv0iwa+jOUfZ3jEamig4KXy7XzEWd+Mbg5Zaw==}
+  /@libsql/darwin-x64@0.3.12:
+    resolution: {integrity: sha512-T1yXSG1WukLq41hEWTU3G1kuV9TVoc+90KFs1KGluLrGvpj5l1QIff35hQlWWi6c1tfPsdlydR6qIO6AZdUwNg==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
@@ -1223,40 +1223,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@libsql/linux-arm64-gnu@0.3.11:
-    resolution: {integrity: sha512-bSgUk7iu2L2Nnu4eev5yMisYDMs/lvux2ffqJaWlA4ITRGgYZPcxHZkSm3XavhhL6YOZewW+I1xx6h6ihqRX5w==}
+  /@libsql/linux-arm64-gnu@0.3.12:
+    resolution: {integrity: sha512-1tmLuj02vySklkadwYEjvXFhyipyNr7oufe55tJK0hqvjQEcqfzBqAD3AHvPo41ug0qlrB2GRpiBlJtcIu2dMQ==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-arm64-musl@0.3.11:
-    resolution: {integrity: sha512-92O6942NPEAys6+GvBG2hJdDXJOCRihuD+/CiWIo2nJLZ9s1RexXEJ7JkxvIO57Oxh8RTDg+7ANriHlMB9MAqw==}
+  /@libsql/linux-arm64-musl@0.3.12:
+    resolution: {integrity: sha512-sM2NJTYe1FiixpJbebTllfV6uuSB1WIOfgQVHb7cJP0Jik5Kyq5F9n4reF6QKRivbPAn3kk6f5uRZKHBE6rvXw==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-gnu@0.3.11:
-    resolution: {integrity: sha512-QvN0I8oNmARhANHTYA/mbMYhcLsNn3YVGbz/T+C2L3EVOgCE8IEU/iNOUK4wl6QExU20ws8lVwQSWAs9kAv5hQ==}
+  /@libsql/linux-x64-gnu@0.3.12:
+    resolution: {integrity: sha512-x8+Qo09osyOWs0/+D48Ml+CMlU33yCXznv4PYfQJc1NWA0dcQkSK353raYebH+cJhNIv0RcEz3ltTT3ME+HwAQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-musl@0.3.11:
-    resolution: {integrity: sha512-ObmTqex1w42OEILEkiufbaLxpriDFlmJQXv29ThJ4StnxjQidfEVgMM+8N1SA8dr0zoACdek59KN5NRKMaRfSQ==}
+  /@libsql/linux-x64-musl@0.3.12:
+    resolution: {integrity: sha512-wY5G8zx727wvg5n/qB4oK357u3HQlz84oNG0XTrKnJVCxqR91Yg6bU+fKsGrvyaGFEqLmZ/Ft0K0pi6Mn/k4vQ==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/win32-x64-msvc@0.3.11:
-    resolution: {integrity: sha512-zvKm/FyRjMcfxMcflOu20CRoDJmZGMBB8niI0qzbVJMazZZqUziqXDAnR49/DnEjqonPczdqgegBd5C16T7ZkA==}
+  /@libsql/win32-x64-msvc@0.3.12:
+    resolution: {integrity: sha512-ko9Ph0ssQk2rUiNXfbquZ4fXXKb/E47GE6+caA4gNt4+rgFc1ksaffekYwym24Zk4VDYsvAQNOpwgd9baIBzLA==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -1660,8 +1660,8 @@ packages:
       is-shared-array-buffer: 1.0.2
     dev: true
 
-  /astro@4.6.0(@types/node@20.10.4)(typescript@5.4.2):
-    resolution: {integrity: sha512-zys+COED1Zs/PurkgAFc/f93e2jACMv7XeC+CyDNBgdE9v2b7rlVPRu054j2nTrQTzGQ7kst2/waQrDbs6e1aA==}
+  /astro@4.6.1(@types/node@20.10.4)(typescript@5.4.2):
+    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -1741,8 +1741,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.0(@types/node@20.11.24)(typescript@5.4.2):
-    resolution: {integrity: sha512-zys+COED1Zs/PurkgAFc/f93e2jACMv7XeC+CyDNBgdE9v2b7rlVPRu054j2nTrQTzGQ7kst2/waQrDbs6e1aA==}
+  /astro@4.6.1(@types/node@20.11.24)(typescript@5.4.2):
+    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -1822,8 +1822,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.0(typescript@5.4.2):
-    resolution: {integrity: sha512-zys+COED1Zs/PurkgAFc/f93e2jACMv7XeC+CyDNBgdE9v2b7rlVPRu054j2nTrQTzGQ7kst2/waQrDbs6e1aA==}
+  /astro@4.6.1(typescript@5.4.2):
+    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -2041,7 +2041,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001609
-      electron-to-chromium: 1.4.735
+      electron-to-chromium: 1.4.736
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -2500,8 +2500,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.735:
-    resolution: {integrity: sha512-pkYpvwg8VyOTQAeBqZ7jsmpCjko1Qc6We1ZtZCjRyYbT5v4AIUKDy5cQTRotQlSSZmMr8jqpEt6JtOj5k7lR7A==}
+  /electron-to-chromium@1.4.736:
+    resolution: {integrity: sha512-Rer6wc3ynLelKNM4lOCg7/zPQj8tPOCB2hzD32PX9wd3hgRRi9MxEbmkFCokzcEhRVMiOVLjnL9ig9cefJ+6+Q==}
 
   /emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -3375,21 +3375,21 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  /libsql@0.3.11:
-    resolution: {integrity: sha512-lgXUHvZcy+4foNrjCBB85jBjB4djGRDZLha+lXGxcvMg4oFFUbx2s8k5bzxIIPAhCrRuCarunGc0qvd27Vi7UA==}
+  /libsql@0.3.12:
+    resolution: {integrity: sha512-to30hj8O3DjS97wpbKN6ERZ8k66MN1IaOfFLR6oHqd25GMiPJ/ZX0VaZ7w+TsPmxcFS3p71qArj/hiedCyvXCg==}
     cpu: [x64, arm64, wasm32]
     os: [darwin, linux, win32]
     dependencies:
       '@neon-rs/load': 0.0.4
       detect-libc: 2.0.2
     optionalDependencies:
-      '@libsql/darwin-arm64': 0.3.11
-      '@libsql/darwin-x64': 0.3.11
-      '@libsql/linux-arm64-gnu': 0.3.11
-      '@libsql/linux-arm64-musl': 0.3.11
-      '@libsql/linux-x64-gnu': 0.3.11
-      '@libsql/linux-x64-musl': 0.3.11
-      '@libsql/win32-x64-msvc': 0.3.11
+      '@libsql/darwin-arm64': 0.3.12
+      '@libsql/darwin-x64': 0.3.12
+      '@libsql/linux-arm64-gnu': 0.3.12
+      '@libsql/linux-arm64-musl': 0.3.12
+      '@libsql/linux-x64-gnu': 0.3.12
+      '@libsql/linux-x64-musl': 0.3.12
+      '@libsql/win32-x64-msvc': 0.3.12
     dev: false
 
   /lilconfig@2.1.0:

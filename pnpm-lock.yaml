@@ -259,7 +259,7 @@ packages:
       '@astrojs/prism': 3.1.0
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.1
-      hast-util-to-text: 4.0.1
+      hast-util-to-text: 4.0.2
       import-meta-resolve: 4.0.0
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
@@ -1728,8 +1728,8 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.8(@types/node@20.10.4)
-      vitefu: 0.2.5(vite@5.2.8)
+      vite: 5.2.9(@types/node@20.10.4)
+      vitefu: 0.2.5(vite@5.2.9)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -1809,8 +1809,8 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.8(@types/node@20.11.24)
-      vitefu: 0.2.5(vite@5.2.8)
+      vite: 5.2.9(@types/node@20.11.24)
+      vitefu: 0.2.5(vite@5.2.9)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -1890,8 +1890,8 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.8
-      vitefu: 0.2.5(vite@5.2.8)
+      vite: 5.2.9
+      vitefu: 0.2.5(vite@5.2.9)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -2048,7 +2048,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001610
-      electron-to-chromium: 1.4.736
+      electron-to-chromium: 1.4.737
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -2507,8 +2507,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.736:
-    resolution: {integrity: sha512-Rer6wc3ynLelKNM4lOCg7/zPQj8tPOCB2hzD32PX9wd3hgRRi9MxEbmkFCokzcEhRVMiOVLjnL9ig9cefJ+6+Q==}
+  /electron-to-chromium@1.4.737:
+    resolution: {integrity: sha512-QvLTxaLHKdy5YxvixAw/FfHq2eWLUL9KvsPjp0aHK1gI5d3EDuDgITkvj0nFO2c6zUY3ZqVAJQiBYyQP9tQpfw==}
 
   /emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -3074,8 +3074,8 @@ packages:
       web-namespaces: 2.0.1
       zwitch: 2.0.4
 
-  /hast-util-to-text@4.0.1:
-    resolution: {integrity: sha512-RHL7Vo2n06ZocCFWqmbyhZ1pCYX/mSKdywt9YD5U6Hquu5syV+dImCXFKLFt02JoK5QxkQFS0PoVdFdPXuPffQ==}
+  /hast-util-to-text@4.0.2:
+    resolution: {integrity: sha512-KK6y/BN8lbaq654j7JgBydev7wuNMcID54lkRav1P0CaE1e47P72AWWPiGKXTJU271ooYzcvTAn/Zt0REnvc7A==}
     dependencies:
       '@types/hast': 3.0.4
       '@types/unist': 3.0.2
@@ -3978,8 +3978,8 @@ packages:
     dependencies:
       '@types/nlcst': 1.0.4
 
-  /node-abi@3.57.0:
-    resolution: {integrity: sha512-Dp+A9JWxRaKuHP35H77I4kCKesDy5HUDEmScia2FyncMTOXASMyg251F5PhFoDA5uqBrDDffiLpbqnrZmNXW+g==}
+  /node-abi@3.58.0:
+    resolution: {integrity: sha512-pXY1jnGf5T7b8UNzWzIqf0EkX4bx/w8N2AvwlGnk2SYYA/kzDVPaH0Dh0UG4EwxBB5eKOIZKPr8VAHSHL1DPGg==}
     engines: {node: '>=10'}
     requiresBuild: true
     dependencies:
@@ -4386,7 +4386,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.57.0
+      node-abi: 3.58.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1
@@ -5481,8 +5481,8 @@ packages:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  /vite@5.2.8:
-    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
+  /vite@5.2.9:
+    resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -5515,8 +5515,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.2.8(@types/node@20.10.4):
-    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
+  /vite@5.2.9(@types/node@20.10.4):
+    resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -5551,8 +5551,8 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vite@5.2.8(@types/node@20.11.24):
-    resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
+  /vite@5.2.9(@types/node@20.11.24):
+    resolution: {integrity: sha512-uOQWfuZBlc6Y3W/DTuQ1Sr+oIXWvqljLvS881SVmAj00d5RdgShLcuXWxseWPd4HXwiYBFW/vXHfKFeqj9uQnw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -5587,7 +5587,7 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vitefu@0.2.5(vite@5.2.8):
+  /vitefu@0.2.5(vite@5.2.9):
     resolution: {integrity: sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -5595,7 +5595,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.8
+      vite: 5.2.9
 
   /volar-service-css@0.0.34(@volar/language-service@2.1.6):
     resolution: {integrity: sha512-C7ua0j80ZD7bsgALAz/cA1bykPehoIa5n+3+Ccr+YLpj0fypqw9iLUmGLX11CqzqNCO2XFGe/1eXB/c+SWrF/g==}

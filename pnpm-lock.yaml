@@ -12,8 +12,8 @@ importers:
         specifier: 1.6.1
         version: 1.6.1
       astro:
-        specifier: ^4.6.1
-        version: 4.6.1(typescript@5.4.2)
+        specifier: ^4.6.2
+        version: 4.6.2(typescript@5.4.2)
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -42,11 +42,11 @@ importers:
         specifier: ^4.0.5
         version: 4.0.5
       '@astrojs/sitemap':
-        specifier: ^3.1.2
-        version: 3.1.2
+        specifier: ^3.1.3
+        version: 3.1.3
       astro:
-        specifier: ^4.6.1
-        version: 4.6.1(@types/node@20.10.4)(typescript@5.4.2)
+        specifier: ^4.6.2
+        version: 4.6.2(@types/node@20.10.4)(typescript@5.4.2)
       marked:
         specifier: ^11.0.1
         version: 11.0.1
@@ -67,8 +67,8 @@ importers:
         specifier: ^0.10.4
         version: 0.10.4
       astro:
-        specifier: ^4.6.1
-        version: 4.6.1(typescript@5.4.2)
+        specifier: ^4.6.2
+        version: 4.6.2(typescript@5.4.2)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.5.10
@@ -87,13 +87,13 @@ importers:
         version: 0.10.4
       '@astrojs/node':
         specifier: ^8.2.5
-        version: 8.2.5(astro@4.6.1)
+        version: 8.2.5(astro@4.6.2)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.6.2)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.6.1
-        version: 4.6.1(typescript@5.4.2)
+        specifier: ^4.6.2
+        version: 4.6.2(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -118,13 +118,13 @@ importers:
         version: 0.10.4
       '@astrojs/node':
         specifier: ^8.2.5
-        version: 8.2.5(astro@4.6.1)
+        version: 8.2.5(astro@4.6.2)
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.6.1)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.6.2)(tailwindcss@3.4.1)
       astro:
-        specifier: ^4.6.1
-        version: 4.6.1(@types/node@20.11.24)(typescript@5.4.2)
+        specifier: ^4.6.2
+        version: 4.6.2(@types/node@20.11.24)(typescript@5.4.2)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -277,12 +277,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.5(astro@4.6.1):
+  /@astrojs/node@8.2.5(astro@4.6.2):
     resolution: {integrity: sha512-IdVD4dBNyg+ScmCATZ0FM7vNLAHq0TSdiJ3LpR4jcWIUhpN1ps5Jg+9CfzMaLmCCe/SJUZejK5EnzqUJdnGYyg==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.6.1(typescript@5.4.2)
+      astro: 4.6.2(typescript@5.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -302,20 +302,20 @@ packages:
       kleur: 4.1.5
     dev: false
 
-  /@astrojs/sitemap@3.1.2:
-    resolution: {integrity: sha512-FxOJldIl5ltZ5CNjocQxHkAO9orwHBjqtaU28o4smobp9vowS0nbGp+I9CrPxkzWdl1crSDm9vjL9tnvG1DSug==}
+  /@astrojs/sitemap@3.1.3:
+    resolution: {integrity: sha512-9WB5c071L+FNbs/0727lcqbHvS17TxnDRdfXXiAMustBRFlqkCrziHy+MsfeghxtyXp0pFTFO3NjGRfOppbFzQ==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.6.1)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.6.2)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.6.1(typescript@5.4.2)
+      astro: 4.6.2(typescript@5.4.2)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -1162,7 +1162,7 @@ packages:
       '@libsql/core': 0.5.6
       '@libsql/hrana-client': 0.5.6
       js-base64: 3.7.7
-      libsql: 0.3.12
+      libsql: 0.3.15
     transitivePeerDependencies:
       - bufferutil
       - encoding
@@ -1175,16 +1175,16 @@ packages:
       js-base64: 3.7.7
     dev: false
 
-  /@libsql/darwin-arm64@0.3.12:
-    resolution: {integrity: sha512-rBiMebxLgsShSEg73CibeuenlUMKXnaW/XoUk3tii1C1U7141w6k5VuF6/jnNl/cS7PMK/vy+2V5N/k++yvb9A==}
+  /@libsql/darwin-arm64@0.3.15:
+    resolution: {integrity: sha512-4Jr10EWOy2Whe4QF56cJF0My5/3M+2HZMEm+0XSdGCXIHt6U63ctAgyTC1Ow2fsb+TH6jyVxDTz57FQyqVXZSQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/darwin-x64@0.3.12:
-    resolution: {integrity: sha512-T1yXSG1WukLq41hEWTU3G1kuV9TVoc+90KFs1KGluLrGvpj5l1QIff35hQlWWi6c1tfPsdlydR6qIO6AZdUwNg==}
+  /@libsql/darwin-x64@0.3.15:
+    resolution: {integrity: sha512-A4Ao51Z6FK+TH2NQLCbOTBnfn90YQxjgo9Xc/Ocmhvu4FrnO5eivtX9VXGykuz8mcan3+arqJdY5DKy/IFZ8PA==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
@@ -1223,40 +1223,40 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@libsql/linux-arm64-gnu@0.3.12:
-    resolution: {integrity: sha512-1tmLuj02vySklkadwYEjvXFhyipyNr7oufe55tJK0hqvjQEcqfzBqAD3AHvPo41ug0qlrB2GRpiBlJtcIu2dMQ==}
+  /@libsql/linux-arm64-gnu@0.3.15:
+    resolution: {integrity: sha512-iN+rJH4vxjIb5wTnBlDFPOP5YxlZ9U0Xbj5PDBjmOCLLPL3JZaaKE1nd2FS1EBfARSbgnRCRL0ZKjLNdezjLrg==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-arm64-musl@0.3.12:
-    resolution: {integrity: sha512-sM2NJTYe1FiixpJbebTllfV6uuSB1WIOfgQVHb7cJP0Jik5Kyq5F9n4reF6QKRivbPAn3kk6f5uRZKHBE6rvXw==}
+  /@libsql/linux-arm64-musl@0.3.15:
+    resolution: {integrity: sha512-X/LRjH2TxrHmZR/1Q4+xatkHAQfNwpJhsiSDkbd918FF/9iisQzHgyPszlgYUse/hCZFTqMoeD0RzGcK18wE7w==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-gnu@0.3.12:
-    resolution: {integrity: sha512-x8+Qo09osyOWs0/+D48Ml+CMlU33yCXznv4PYfQJc1NWA0dcQkSK353raYebH+cJhNIv0RcEz3ltTT3ME+HwAQ==}
+  /@libsql/linux-x64-gnu@0.3.15:
+    resolution: {integrity: sha512-9cNCjvyrC/PFBD0OMy3Rp/wjlEIQTaZOrYQMAfz5OMf+tPhX8VCGf2VmPnLGEoIkcj8tp5186+5yZw8TYJwNFA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/linux-x64-musl@0.3.12:
-    resolution: {integrity: sha512-wY5G8zx727wvg5n/qB4oK357u3HQlz84oNG0XTrKnJVCxqR91Yg6bU+fKsGrvyaGFEqLmZ/Ft0K0pi6Mn/k4vQ==}
+  /@libsql/linux-x64-musl@0.3.15:
+    resolution: {integrity: sha512-93Tb0GcFCl2jaD5fbOP2y30b/RnWdlYiZo7KriPEb+XnOC3QN84l+uBzIeo1P9sxHE+8E/rM/uwl6j8qmQW6vw==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
     dev: false
     optional: true
 
-  /@libsql/win32-x64-msvc@0.3.12:
-    resolution: {integrity: sha512-ko9Ph0ssQk2rUiNXfbquZ4fXXKb/E47GE6+caA4gNt4+rgFc1ksaffekYwym24Zk4VDYsvAQNOpwgd9baIBzLA==}
+  /@libsql/win32-x64-msvc@0.3.15:
+    resolution: {integrity: sha512-1YtIBFCT7cO4/jrswwxs171yQk5gJA60JqEb+wVQjE3FSvJDc4Oi8DKNRcN8Vfe/wzI5t6wioS6QpO4aHNHuTQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -1444,6 +1444,9 @@ packages:
     dependencies:
       '@babel/types': 7.24.0
 
+  /@types/cookie@0.5.4:
+    resolution: {integrity: sha512-7z/eR6O859gyWIAjuvBWFzNURmf2oPBmJlfVWkwehU5nzIyjwBsTh7WMmEEV4JFnHuQ3ex4oyTvfKzcyJVDBNA==}
+
   /@types/debug@4.1.12:
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
     dependencies:
@@ -1569,8 +1572,8 @@ packages:
       '@volar/language-core': 2.1.6
       path-browserify: 1.0.1
 
-  /@vscode/emmet-helper@2.9.2:
-    resolution: {integrity: sha512-MaGuyW+fa13q3aYsluKqclmh62Hgp0BpKIqS66fCxfOaBcVQ1OnMQxRRgQUYnCkxFISAQlkJ0qWWPyXjro1Qrg==}
+  /@vscode/emmet-helper@2.9.3:
+    resolution: {integrity: sha512-rB39LHWWPQYYlYfpv9qCoZOVioPCftKXXqrsyqN1mTWZM6dTnONT63Db+03vgrBbHzJN45IrgS/AGxw9iiqfEw==}
     dependencies:
       emmet: 2.4.7
       jsonc-parser: 2.3.1
@@ -1667,8 +1670,8 @@ packages:
       is-shared-array-buffer: 1.0.2
     dev: true
 
-  /astro@4.6.1(@types/node@20.10.4)(typescript@5.4.2):
-    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
+  /astro@4.6.2(@types/node@20.10.4)(typescript@5.4.2):
+    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -1683,6 +1686,7 @@ packages:
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
       '@types/babel__core': 7.20.5
+      '@types/cookie': 0.5.4
       acorn: 8.11.3
       aria-query: 5.3.0
       axobject-query: 4.0.0
@@ -1748,8 +1752,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.1(@types/node@20.11.24)(typescript@5.4.2):
-    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
+  /astro@4.6.2(@types/node@20.11.24)(typescript@5.4.2):
+    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -1764,6 +1768,7 @@ packages:
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
       '@types/babel__core': 7.20.5
+      '@types/cookie': 0.5.4
       acorn: 8.11.3
       aria-query: 5.3.0
       axobject-query: 4.0.0
@@ -1829,8 +1834,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.1(typescript@5.4.2):
-    resolution: {integrity: sha512-gcL22NEhuRi4wu9/x5Kn2eJf7nT6GeU5BxdN6AHbUnX6UzEDIWtpgHs5lBIZYExKbHKN9PjEGXWQzQtFwLU+5g==}
+  /astro@4.6.2(typescript@5.4.2):
+    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -1845,6 +1850,7 @@ packages:
       '@babel/traverse': 7.24.1
       '@babel/types': 7.24.0
       '@types/babel__core': 7.20.5
+      '@types/cookie': 0.5.4
       acorn: 8.11.3
       aria-query: 5.3.0
       axobject-query: 4.0.0
@@ -2048,7 +2054,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001610
-      electron-to-chromium: 1.4.737
+      electron-to-chromium: 1.4.738
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -2507,8 +2513,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.737:
-    resolution: {integrity: sha512-QvLTxaLHKdy5YxvixAw/FfHq2eWLUL9KvsPjp0aHK1gI5d3EDuDgITkvj0nFO2c6zUY3ZqVAJQiBYyQP9tQpfw==}
+  /electron-to-chromium@1.4.738:
+    resolution: {integrity: sha512-lwKft2CLFztD+vEIpesrOtCrko/TFnEJlHFdRhazU7Y/jx5qc4cqsocfVrBg4So4gGe9lvxnbLIoev47WMpg+A==}
 
   /emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -3382,21 +3388,21 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  /libsql@0.3.12:
-    resolution: {integrity: sha512-to30hj8O3DjS97wpbKN6ERZ8k66MN1IaOfFLR6oHqd25GMiPJ/ZX0VaZ7w+TsPmxcFS3p71qArj/hiedCyvXCg==}
+  /libsql@0.3.15:
+    resolution: {integrity: sha512-z7mA9yfwEUAsi0vq20ryEAfO9svtlLjpnBKYtm4TYTOVYjWWt6o7ZECMsBGpNGio/1v6cc5bI2ZJKsAdS0kP3g==}
     cpu: [x64, arm64, wasm32]
     os: [darwin, linux, win32]
     dependencies:
       '@neon-rs/load': 0.0.4
       detect-libc: 2.0.2
     optionalDependencies:
-      '@libsql/darwin-arm64': 0.3.12
-      '@libsql/darwin-x64': 0.3.12
-      '@libsql/linux-arm64-gnu': 0.3.12
-      '@libsql/linux-arm64-musl': 0.3.12
-      '@libsql/linux-x64-gnu': 0.3.12
-      '@libsql/linux-x64-musl': 0.3.12
-      '@libsql/win32-x64-msvc': 0.3.12
+      '@libsql/darwin-arm64': 0.3.15
+      '@libsql/darwin-x64': 0.3.15
+      '@libsql/linux-arm64-gnu': 0.3.15
+      '@libsql/linux-arm64-musl': 0.3.15
+      '@libsql/linux-x64-gnu': 0.3.15
+      '@libsql/linux-x64-musl': 0.3.15
+      '@libsql/win32-x64-msvc': 0.3.15
     dev: false
 
   /lilconfig@2.1.0:
@@ -5619,7 +5625,7 @@ packages:
         optional: true
     dependencies:
       '@volar/language-service': 2.1.6
-      '@vscode/emmet-helper': 2.9.2
+      '@vscode/emmet-helper': 2.9.3
       vscode-html-languageservice: 5.2.0
 
   /volar-service-html@0.0.34(@volar/language-service@2.1.6):

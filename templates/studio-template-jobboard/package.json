@@ -14,7 +14,7 @@
     "@astrojs/db": "^0.10.4",
     "@astrojs/node": "^8.2.5",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.6.1",
+    "astro": "^4.6.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
   },
